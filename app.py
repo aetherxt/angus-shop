@@ -4,14 +4,17 @@ import mysql.connector
 app = Flask(__name__)
 
 mydb = mysql.connector.connect(
-    host="locahost",
+    host="localhost",
     user="root",
     password="Abcd@1234",
-    database="angusshop"
+    database="school"
 )
-dbcursor = mydb.cursor()
+mycursor = mydb.cursor()
 
 @app.route("/")
 @app.route("/home")
 def home():
     return render_template("main.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
