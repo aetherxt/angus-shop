@@ -4,24 +4,77 @@
 {% endblock %}
 
 {% block navbar %}
-<nav class="navbar navbar-expand-lg navbar-light bg-primary shadow-md">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a href="/" class="navbar-brand">
-            <!--img-->
+        <a class="navbar-brand" href="/">
+            <i class="bi bi-egg-fill"></i>
+            Angus
         </a>
-    <ul class="nav nav-pills">
-        <li class="nav-item">Home</li>
-        <li class="nav-item">Categories</li>
-        <li class="nav-item">Profile</li>
-    </ul>
-    </div>
-    <div class="d-flex">
-        <button type="button" class="btn btn-outline-success">Login</button>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Categories</a>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Profile</a>
+            </li>
+        </ul>
+        <form action="#" class="d-flex justify-content-center mx-3">
+            <input type="search" class="form-control me-2" placeholder="Search">
+            <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <div class="d-flex">
+            <button type="button" class="btn btn-outline-success mx-2" href="#">Login</button>
+            <button type="button" class="btn btn-primary active mx-2" href="#">Sell</button>
+        </div>
     </div>
 </nav>
 {% endblock %}
 
 {% block body %}
+<div class="container py-4">
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img class="d-block mx-lg-auto img-fluid" src="https://cdn.britannica.com/39/76939-050-B787E5BF/bull-Black-Angus.jpg" width="700" height="500">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold">Angesu Shop</h1>
+                    <p class="lead">Rob Angus and sell his stuff</p>
+                    <button class="btn btn-lg btn-primary me-2" href="#">Start Today!</button>
+                    <button class="btn btn-lg btn-outline-secondary" href="#">About Us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% for item in product %}
+                <div class="col">
+                    <div class="card shadow" href="view/{{item}}">
+                        <div class="card-img">
+                            <img src="{{product[item]['image']}}" class="img card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{product[item]['name']}}</h5>
+                            <h6 class="card-subtitle my-2 text-muted">{{product[item]['condition']}}</h6>
+                            <div class="dropdown-divider"></div>
+                            <p class="card-text">{{product[item]['description']}}</p>
+                            <p class="card-text fw-bold">HK ${{product[item]['price']}}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p>{{product[item]['user']}}</p>
+                                <p class="text-muted">{{product[item]['postdate']}}</p>
+                            </div>
+                            <p href="#"><i class="bi bi-heart"></i></p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block footer %}
