@@ -9,7 +9,7 @@ mydb = mysql.connector.connect(
     password="Abcd@1234",
     database="school"
 )
-dbcursor = mydb.cursor()
+mycursor = mydb.cursor()
 
 @app.route("/")
 @app.route("/home")
