@@ -1,19 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    {% block head %}{% endblock %}
-</head>
+{% block head %}
+{% endblock %}
 
-<body>
-    {% block navbar %}
-    {% endblock %}
-    {% block body %}
-    {% endblock %}
-</body>
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-light bg-primary shadow-md">
+    <div class="container-fluid">
+        <a href="/" class="navbar-brand">
+            <!--img-->
+        </a>
+    <ul class="nav nav-pills">
+        <li class="nav-item">Home</li>
+        <li class="nav-item">Categories</li>
+        <li class="nav-item">Profile</li>
+    </ul>
+    </div>
+    <div class="d-flex">
+        <button type="button" class="btn btn-outline-success">Login</button>
+    </div>
+</nav>
+{% endblock %}
 
-</html>
+{% block body %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
