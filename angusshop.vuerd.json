@@ -1,6 +1,6 @@
 {
   "canvas": {
-    "version": "2.2.6",
+    "version": "2.2.10",
     "width": 2000,
     "height": 2000,
     "scrollTop": -426.6693267822268,
@@ -27,6 +27,7 @@
     "bracketType": "none",
     "setting": {
       "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
       "columnOrder": [
         "columnName",
         "columnDataType",
@@ -604,7 +605,7 @@
           "active": false,
           "left": 123.926,
           "top": 686.0002,
-          "zIndex": 34,
+          "zIndex": 1,
           "widthName": 65.5908203125,
           "widthComment": 60
         },
