@@ -3,35 +3,6 @@
 {% block head %}
 {% endblock %}
 
-{% block navbar %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-            <i class="bi bi-egg-fill"></i>
-            Angus
-        </a>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link active" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Categories</a>
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Profile</a>
-            </li>
-        </ul>
-        <form action="#" class="d-flex justify-content-center mx-3">
-            <input type="search" class="form-control me-2" placeholder="Search">
-            <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
-        </form>
-        <div class="d-flex">
-            <button type="button" class="btn btn-outline-success mx-2" href="#">Login</button>
-            <button type="button" class="btn btn-primary active mx-2" href="#">Sell</button>
-        </div>
-    </div>
-</nav>
-{% endblock %}
-
 {% block body %}
 <div class="container py-4">
     <div class="p-5 mb-4 bg-light rounded-3">
@@ -43,8 +14,8 @@
                 <div class="col-lg-6">
                     <h1 class="display-5 fw-bold">Angesu Shop</h1>
                     <p class="lead">Rob Angus and sell his stuff</p>
-                    <button class="btn btn-lg btn-primary me-2" href="#">Start Today!</button>
-                    <button class="btn btn-lg btn-outline-secondary" href="#">About Us</button>
+                    <a class="btn btn-lg btn-primary me-2" href="/signup">Start Today!</a>
+                    <a type="button" class="btn btn-lg btn-outline-secondary" href="#">About Us</a>
                 </div>
             </div>
         </div>
@@ -78,4 +49,19 @@
 {% endblock %}
 
 {% block footer %}
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-muted">© 2021 Angus, Shop</p>
+        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <i class="bi bi-egg-fill"></i>
+        </a>
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">When</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Angus</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Is</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Sus</a></li>
+        </ul>
+    </footer>
+</div>
 {% endblock %}

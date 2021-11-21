@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title>Angus Shop</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +17,35 @@
 </head>
 
 <body>
-    {% block navbar %}
-    {% endblock %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <i class="bi bi-egg-fill"></i>
+                Angus
+            </a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Categories</a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">About</a>
+                </li>
+            </ul>
+            <form action="#" class="d-flex justify-content-center mx-3">
+                <input type="search" class="form-control me-2" placeholder="Search">
+                <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+            </form>
+            <div class="d-flex">
+                <button type="button" class="btn btn-outline-success mx-2" href="/signin">Login</button>
+                <button type="button" class="btn btn-primary active mx-2" href="#">Sell</button>
+            </div>
+        </div>
+    </nav>
     {% block body %}
+    {% endblock %}
+    {% block footer %}
     {% endblock %}
 </body>
 
