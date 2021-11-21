@@ -3,7 +3,7 @@
 ### cmon guys it'll be funny
 
 fontend:
-tailwind css
+bootstrap
 
 backend:
 python, flask
