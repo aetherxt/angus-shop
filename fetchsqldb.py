@@ -9,3 +9,7 @@ def fetchdata(dbname, tablename):
     )
     mycursor = mydb.cursor()
     
+    searchcmd = f"SELECT * FROM {tablename}"
+    mycursor.execute(searchcmd)
+    fetchresult = mycursor.fetchall()
+    return fetchresult
